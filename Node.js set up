@@ -1,0 +1,23 @@
+mkdir personal-finance-backend
+cd personal-finance-backend
+
+npm init -y
+
+npm install express
+
+touch server.js
+
+const express = require('express');
+const app = express();
+const port = process.env.PORT || 5000; // You can choose any port
+
+app.get('/', (req, res) => {
+  res.send('Personal Finance App Backend is running!');
+});
+
+app.listen(port, () => {
+  console.log(`Server listening on port ${port}`);
+});
+
+
+node server.js
